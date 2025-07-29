@@ -61,7 +61,7 @@ export class AuthService {
 
     const accessToken = await this.jwtService.generateToken(
       payload,
-      process.env.JWT_SECRET_KEY!,
+      process.env.JWT_SECRET!,
       {expiresIn: "2h"}
     );
     
