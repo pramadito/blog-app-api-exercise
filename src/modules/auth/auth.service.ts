@@ -64,7 +64,7 @@ export class AuthService {
 
     const payload = { id: user.id };
 
-    const accessToken = await this.jwtService.generateToken(
+    const accessToken = this.jwtService.generateToken(
       payload,
       process.env.JWT_SECRET!,
       { expiresIn: "2h" }
